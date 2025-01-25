@@ -113,7 +113,7 @@ pub fn find_secrets(
         walk_builder.add(additional_path);
     }
     if ignore_info.ignore_file_path.is_some() {
-        walk_builder.add_ignore(ignore_info.ignore_file_path.unwrap());
+        walk_builder.add_custom_ignore_filename(ignore_info.ignore_file_path.unwrap());
     }
 
     let parallel_walker = walk_builder
